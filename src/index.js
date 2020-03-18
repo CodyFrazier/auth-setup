@@ -20,7 +20,7 @@ const App = ()=> {
     };
     console.log(credentials);
   };
-
+  console.log('auth:', auth)
   return (
     <div>
       <h1>Auth App</h1>
@@ -29,8 +29,8 @@ const App = ()=> {
           <form onSubmit={ onSubmit }>
             <h2>Login</h2>
             <div className='error'>{ error }</div>
-            <input value={ username } onChange={ ev => setUsername(ev.target.value )}/>
-            <input type='password' value={ password } onChange={ ev => setPassword(ev.target.value )}/>
+            <input value={ username } placeholder = 'Type Username...' onChange={ ev => setUsername(ev.target.value )}/>
+            <input type='password' placeholder = 'Type Password...' value={ password } onChange={ ev => setPassword(ev.target.value )}/>
             <button>Save</button>
           </form>
         )
